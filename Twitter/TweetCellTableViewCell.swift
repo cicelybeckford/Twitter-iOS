@@ -12,13 +12,16 @@ class TweetCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var screenNameLabel: UILabel!
     @IBOutlet weak var tweetContentLabel: UILabel!
     @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var rtButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var favCountLabel: UILabel!
+    @IBOutlet weak var rtCountLabel: UILabel!
     
     var favorited:Bool = false
     var tweetId:Int = -1
-//    var retweeted:Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,12 +58,16 @@ class TweetCellTableViewCell: UITableViewCell {
         if (toBeFavorited) {
             TwitterAPICaller.client?.favoriteTweet(tweetId: tweetId, success: {
                 self.setFavorite(true)
+                self.favCountLabel.text = String(Int(self.favCountLabel.text!)! + 1)
             }, failure: { (error) in
                 print("Favorite did not succeed: \(error)")
             })
         } else {
             TwitterAPICaller.client?.unfavoriteTweet(tweetId: tweetId, success: {
                 self.setFavorite(false)
+                if (Int(self.favCountLabel.text!)! > 0) {
+                    self.favCountLabel.text = String(Int(self.favCountLabel.text!)! - 1)
+                }
             }, failure: { (error) in
                 print("Unfavorite did not succeed: \(error)")
             })
@@ -70,6 +77,7 @@ class TweetCellTableViewCell: UITableViewCell {
     @IBAction func retweetTweet(_ sender: Any) {
         TwitterAPICaller.client?.retweetTweet(tweetId: tweetId, success: {
             self.setRetweeted(true)
+            self.rtCountLabel.text = String(Int(self.rtCountLabel.text!)! + 1)
         }, failure: { (error) in
             print("Error retweeting: \(error)")
         })
