@@ -1,6 +1,8 @@
 # Project 3 - *Twitter*
 
-# Twitter - Part II
+**Twitter** is a basic twitter app to read your tweets.
+
+## Twitter - Part II
 
 This is a basic twitter app to view, compose, favorite, and retweet tweets.
 
@@ -26,8 +28,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src="http://g.recordit.co/woW1iX4ju7.gif" title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-
-**Twitter** is a basic twitter app to read your tweets.
+## Twitter - Part I
 
 Time spent: **2** hours spent in total
 
