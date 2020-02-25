@@ -20,7 +20,7 @@
                                 <rect key="frame" x="90" y="65" width="195" height="253"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYk-lb-AhL">
-                                <rect key="frame" x="43" y="368" width="289" height="48"/>
+                                <rect key="frame" x="43" y="368" width="293" height="48"/>
                                 <color key="backgroundColor" red="0.1237232611" green="0.63543647530000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="293" id="ICb-c3-MM9"/>
@@ -43,7 +43,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="j8G-rP-3Xi" firstAttribute="trailing" secondItem="WYk-lb-AhL" secondAttribute="trailing" constant="43" id="5rb-Nv-I1Q"/>
                             <constraint firstItem="TDn-Wb-ZCD" firstAttribute="leading" secondItem="j8G-rP-3Xi" secondAttribute="leading" constant="90" id="ZAl-pc-Amj"/>
                             <constraint firstItem="TDn-Wb-ZCD" firstAttribute="top" secondItem="j8G-rP-3Xi" secondAttribute="top" constant="65" id="cu9-aZ-dgB"/>
                             <constraint firstItem="j8G-rP-3Xi" firstAttribute="trailing" secondItem="TDn-Wb-ZCD" secondAttribute="trailing" constant="90" id="vh9-PX-9HH"/>
